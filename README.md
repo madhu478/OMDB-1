@@ -9,7 +9,7 @@ RUN pip install requests This will install python module inside the image
 CMD ["omdbapi.py","Bahubali"] can be used for executing a specific command
 
 
-first we create image out of Dockerfile for that rum command docker build -t <imagename> <path of Dockerfile> if Dockerfile present in the same directory just give .
+first we create image out of Dockerfile for that rum command docker build -t (imagename) (path of Dockerfile) if Dockerfile present in the same directory just give .
 After creating the image create the container out of image 
-Run the command docker run <imagename>
+Run the command docker run (imagename)
    
