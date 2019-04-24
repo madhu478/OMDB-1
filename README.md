@@ -1,5 +1,5 @@
 In here having the OMDB python program that will query the OMDB Web Api
-TO see the output of the program run python OMDBAPI.py 'Bahubali'
+TO see the output of the program run python omdbapi.py 'Titanic'
 For Dockerize the program we will write the Dockerfile
 In Dockerfile mentioned FROM python:latest   this for taking the base image from docker hub
 WORKDIR /usr/src/app this is for when container created defaulty work from that Directory
