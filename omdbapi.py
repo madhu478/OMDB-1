@@ -1,22 +1,19 @@
 import requests
 import json
 import sys
-try:
- MovieName=sys.argv[1]
-except NameError:
-  print ("Title not found")
+movie=sys.argv[1]
 url = 'http://www.omdbapi.com'
 params = dict(
     apikey='8d6012',
 )
-params['t']=MovieName
+params['t']=movie
 resp = requests.get(url=url, params=params)
-info = resp.json()
+req = resp.json()
 try:
-  print('Movie :'+info['Title'])
-except KeyError:
-  print ("Title not found")
+  print("Movie is :" +req['Title'])
+except:
+  print ("Movie not found")
 try:
-  print('IMDB Rating :'+info['imdbRating'])
-except KeyError:
-  print ("IMDB Rating not found")
+  print("Rotten Tomatoes Rating is :" +req['Ratings'][1]['Value'])
+except:
+  print ("Rotten Tomatoes Rating not found ")
