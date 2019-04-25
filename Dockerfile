@@ -1,6 +1,5 @@
-FROM python:3
-RUN pip install requests    
+FROM ubutu:xenial
+RUN apt-get update && apt-get install python3 -y && apt-get install pip-python -y && pip install requests    
 WORKDIR /usr/src/app                                                                                                      
-COPY ./omdbapi.py /usr/src/app                                                                                           
-ENTRYPOINT ["/usr/local/bin/python"]                                                                                               
-CMD ["omdbapi.py","Titanic"]
+COPY ./omdbapi.py /usr/src/app                                                                                                                                                                                       
+CMD ["python","omdbapi.py","Titanic"]
